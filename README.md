@@ -7,6 +7,10 @@ To start the program, open a terminal and enter the following:
 
 ./init.sh
 
+If it doesn't work, you will need to give it execute permissions by doing:
+
+sudo chmod +x init.sh
+
 Then, in the top left corner of the screen, choose Applications and log out and log back in.
 Once you are logged back in, enter the following:
 
