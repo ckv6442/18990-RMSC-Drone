@@ -21,3 +21,7 @@ From here, the program is good to go. I couldn't get the background image to sta
 with OpenCV so my temporary solution is to open the image in the NixOS file viewer and fullscreen it.
 
 Once that is done, you're good to go! (To exit, CTRL+C)
+
+
+PS: The videos can be easily changed, just need to be renamed to vidx where x is the number of the video.
+The videos are stored locally on the PC at RMSC.
