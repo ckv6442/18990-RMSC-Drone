@@ -1,8 +1,11 @@
+// Colin Vo (RIT MSD2)
+// Last modified 
+
 // Includes necessary for this project
-#include <Wire.h>
-#include <PN532.h>
-#include <PN532_I2C.h>
-#include <NfcAdapter.h>
+#include <Wire.h> // Native
+#include <PN532.h> // Install Adafruit PN532
+#include <PN532_I2C.h> // Install Adafruit PN532
+#include <NfcAdapter.h> // Install NDEF_MFRC522 Library
 
 // Configure I2C device as NFC
 PN532_I2C pn532i2c(Wire);
@@ -51,7 +54,7 @@ void loop(void)
   uint8_t uidLength;        // Length of the UID (4 or 7 bytes depending on ISO14443A card type)
 
   // 1 second delay, change here to be longer or shorter (maybe 0.5s?)
-  delay(1000);
+  // delay(1);
 
   // Read the passive target
   success = nfc.readPassiveTargetID(PN532_MIFARE_ISO14443A, &uid[0], &uidLength);
@@ -78,12 +81,13 @@ void loop(void)
     */
 
     // Print an identifier for the python term to read
+    // Can probably modify this with a RFID tag writer
     Serial.print("0x");
     Serial.print(PN532_I2C_ADDRESS, HEX);
     Serial.println("");
     
     // Wait 1 second before continuing
-    delay(1000);
+    // delay(1);
   }
   else
   {
